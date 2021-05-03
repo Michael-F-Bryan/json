@@ -54,6 +54,9 @@ where
             disable_recursion_limit: false,
         }
     }
+
+    /// Offset from the beginning of the input to the next byte to be parsed.
+    pub fn byte_offset(&self) -> usize { self.read.byte_offset() }
 }
 
 #[cfg(feature = "std")]
